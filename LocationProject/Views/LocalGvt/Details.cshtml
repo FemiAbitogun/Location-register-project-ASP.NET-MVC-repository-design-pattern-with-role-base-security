@@ -1,0 +1,43 @@
+﻿@model LocationProject.Models.LGVTViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LGVTViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.LGVTName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LGVTName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateZipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateZipCode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.LGVTId }) |
+    @Html.ActionLink("Back to List", "GetAll")
+</p>

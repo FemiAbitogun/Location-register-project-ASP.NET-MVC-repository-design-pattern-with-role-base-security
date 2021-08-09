@@ -1,0 +1,47 @@
+﻿@model IEnumerable<LocationProject.Models.LGVTViewModel>
+
+@{
+    ViewBag.Title = "GetAll";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table ">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LGVTName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateZipCode)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+       
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LGVTName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateZipCode)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.LGVTId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.LGVTId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.LGVTId })
+            </td>
+        </tr>
+    }
+
+</table>

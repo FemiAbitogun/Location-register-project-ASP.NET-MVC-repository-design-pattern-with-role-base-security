@@ -1,0 +1,46 @@
+﻿@model IEnumerable<LocationProject.Models.StateViewModel>
+
+@{
+    ViewBag.Title = "GetAll";
+}
+
+<h2>List of States</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+
+  
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZipCode)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        @Html.HiddenFor(m=> item.StateId);
+<tr>
+    
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ZipCode)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.StateId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.StateId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.StateId })
+    </td>
+</tr>
+    }
+
+</table>

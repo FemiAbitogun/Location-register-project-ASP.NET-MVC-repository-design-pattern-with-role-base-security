@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/LocationProject/bin
+/packages
+/LocationProject/obj
